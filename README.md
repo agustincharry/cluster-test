@@ -20,18 +20,22 @@
 
 
 ## Comandos Usados
+
 <a name="docker"/>
 ### Docker
+
 <a name="dockerImages"/>
 #### Listar imágenes
 ```
 docker images
 ```
+
 <a name="dockerPs"/>
 #### Listar contenedores
 ```
 docker ps
 ```
+
 <a name="dockerBuild"/>
 #### Construir imagen
 ###### Este comando se debe ejecutar en la carpeta del micro servicio que se desee contruir.
@@ -68,21 +72,25 @@ docker push agustincharry/ms1:1.1
 
 <a name="kubernetes"/>
 ### Kubernetes
+
 <a name="k8sgetPods"/>
 #### Listar pods
 ```
 kubectl get pods
 ```
+
 <a name="k8sgetServices"/>
 #### Listar servicios
 ```
 kubectl get services
 ```
+
 <a name="k8sgetDeploy"/>
 #### Listar deployments
 ```
 kubectl get deployments
 ```
+
 <a name="k8sapply"/>
 #### Ejecutar Deplyment y servicio
 ```
