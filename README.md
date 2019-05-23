@@ -21,7 +21,7 @@
 
 ## Comandos Usados
 
-<a name="docker"/>
+<a name="docker"/>\
 ### Docker
 
 <a name="dockerImages"/>
