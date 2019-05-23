@@ -21,22 +21,26 @@
 
 ## Comandos Usados
 
-<a name="docker"/>\
+<a name="docker"/>
+
 ### Docker
 
 <a name="dockerImages"/>
+
 #### Listar imágenes
 ```
 docker images
 ```
 
 <a name="dockerPs"/>
+
 #### Listar contenedores
 ```
 docker ps
 ```
 
 <a name="dockerBuild"/>
+
 #### Construir imagen
 ###### Este comando se debe ejecutar en la carpeta del micro servicio que se desee contruir.
 * ###### Donde dice "agustincharry" reemplazar por el nombre de usuario en dockerhub.
@@ -47,6 +51,7 @@ docker ps
 docker build --tag=agustincharry/ms1:1.1 .
 ```
 <a name="dockerRun"/>
+
 #### Correr imagen en contenedor - Probar funcionamiento
 ###### La aplicación corre en el puerto 4000 en el contenedor, pero se mapea al 3000 para ser accedido desde el exterior.
 ```
@@ -57,12 +62,14 @@ docker run -p 3000:4000 agustincharry/ms1:1.1
 http://192.168.99.100:3000/
 ```
 <a name="dockerStop"/>
+
 #### Parar contenedor
 ###### Reemplazar "8c8016588ae1" por el ID del contenedor en ejecución.
 ```
 docker container stop 8c8016588ae1
 ```
 <a name="dockerPush"/>
+
 #### Subir imagen a Dockerhub
 ```
 docker push agustincharry/ms1:1.1
@@ -71,27 +78,32 @@ docker push agustincharry/ms1:1.1
 
 
 <a name="kubernetes"/>
+
 ### Kubernetes
 
 <a name="k8sgetPods"/>
+
 #### Listar pods
 ```
 kubectl get pods
 ```
 
 <a name="k8sgetServices"/>
+
 #### Listar servicios
 ```
 kubectl get services
 ```
 
 <a name="k8sgetDeploy"/>
+
 #### Listar deployments
 ```
 kubectl get deployments
 ```
 
 <a name="k8sapply"/>
+
 #### Ejecutar Deplyment y servicio
 ```
 kubectl apply -f ms1Deployment.yaml
