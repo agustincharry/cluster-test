@@ -1,5 +1,6 @@
 # NodePort Services
 ###### Pruebas de concepto de servicios tipo NodePort.
+###### **En este ejemplo, tanto MS1 como MS2 son accesibles desde el exterior.**
 ###### Despues de aplicar los archivos se tendrá acceso a:
 #### DNS Interno
 ###### Los pods tendrán acceso a las URLs:
