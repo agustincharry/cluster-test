@@ -1,0 +1,14 @@
+# NodePort Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms1
+  namespace: default
+spec:
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 4000
+  selector:
+    app: ms1
