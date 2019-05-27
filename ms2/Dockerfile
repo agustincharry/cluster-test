@@ -1,13 +1,10 @@
 FROM node:lts-alpine
 
-LABEL name =  "MS2"
-LABEL build_date = "2019-05-23"
-LABEL version = "1.1"
-
 ENV NODE_ENV=prod
 
 WORKDIR /app
+COPY package.json /app
+RUN npm install --production
 COPY . /app
 
-RUN npm install --production
 CMD node index.js
