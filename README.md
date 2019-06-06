@@ -3,8 +3,21 @@
 ###### Contiene dos micro servicios MS1 y MS2 que se comunican entre sí. En la carpeta de cada uno se encuentra el "README.md" para mayor información.
 ## Contenido
 
+## Tecnologías usadas
+* NodeJS
+* ExpressJS
+* Docker
+* Kubernetes
 
-##### Table of Contents
+## Conceptos importantes usados
+* Imagen Docker
+* Archivos YML o YAML
+* Servicios de Kubernetes
+	* ClusterIP
+	* NodePort
+	* LoadBalancer
+
+## Tabla de Contenido
 * [Docker](#docker)
 	* [Listar imágenes](#dockerImages)
 	* [Listar contenedores](#dockerPs)
