@@ -1,0 +1,19 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: ms2
+  labels:
+    app: ms2
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ms2
+    spec:
+      containers:
+      - image: agustincharry/ms2:1.2
+        name: ms2
+        ports:
+        - name: http
+          containerPort: 4000

@@ -1,0 +1,15 @@
+# LoadBalancer Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-lb
+  labels:
+    app: deployment_label
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80
+    targetPort: 4000
+  selector:
+    app: myLB
