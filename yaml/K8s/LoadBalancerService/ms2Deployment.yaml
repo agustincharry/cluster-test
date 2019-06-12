@@ -16,7 +16,7 @@ spec:
         app: myLB
     spec:
       containers:
-      - image: agustincharry/ms2:1.1
+      - image: agustincharry/ms2:1.2
         name: ms2
         ports:
         - name: http
