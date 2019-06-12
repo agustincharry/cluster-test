@@ -16,7 +16,7 @@ spec:
         app: ms1
     spec:
       containers:
-      - image: agustincharry/ms1:1.1
+      - image: agustincharry/ms1:1.2
         name: ms1
         ports:
         - name: http

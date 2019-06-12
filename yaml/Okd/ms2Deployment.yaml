@@ -1,11 +1,14 @@
-kind: "DeploymentConfig"
 apiVersion: "v1"
+kind: "DeploymentConfig"
 metadata:
   name: ms2
   labels:
     app: ms2
 spec:
-  replicas: 2
+  revisionHistoryLimit: 2
+  strategy:
+    type: Rolling
+  replicas: 1
   template:
     metadata:
       labels:

@@ -1,5 +1,5 @@
-# K8s Test
-###### Pruebas de concepto de Docker y Kubernetes.
+# Cluster Test
+###### Pruebas de concepto de Docker, Kubernetes y Openshift.
 ###### Contiene dos micro servicios MS1 y MS2 que se comunican entre sí. En la carpeta de cada uno se encuentra el "README.md" para mayor información.
 ## Contenido
 
@@ -8,11 +8,13 @@
 * ExpressJS
 * Docker
 * Kubernetes
+* Minikube
+* Minishift
 
 ## Conceptos importantes usados
 * Imagen Docker
 * Archivos YML o YAML
-* Servicios de Kubernetes
+* Servicios de Kubernetes y OpenShift
 	* ClusterIP
 	* NodePort
 	* LoadBalancer
@@ -25,7 +27,7 @@
 	* [Correr imagen](#dockerRun)
 	* [Parar contenedor](#dockerStop)
 	* [Subir imagen](#dockerPush)
-* [Kubernetes](#kubernetes)
+* [Kubernetes/OpenShift](#kubernetes-okd)
 	* [Listar pods](#k8sgetPods)
 	* [Listar Servicios](#k8sgetServices)
 	* [Listar deployments](#k8sgetDeploy)
@@ -90,15 +92,16 @@ docker push agustincharry/ms1:1.1
 
 
 
-<a name="kubernetes"/>
+<a name="kubernetes-okd"/>
 
-### Kubernetes
+### Kubernetes/OpenShift
 
 <a name="k8sgetPods"/>
 
 #### Listar pods
 ```
 kubectl get pods
+oc get pods
 ```
 
 <a name="k8sgetServices"/>
@@ -106,6 +109,7 @@ kubectl get pods
 #### Listar servicios
 ```
 kubectl get services
+oc get services
 ```
 
 <a name="k8sgetDeploy"/>
@@ -113,6 +117,7 @@ kubectl get services
 #### Listar deployments
 ```
 kubectl get deployments
+oc get deploymentconfig
 ```
 
 <a name="k8sapply"/>
@@ -120,5 +125,8 @@ kubectl get deployments
 #### Ejecutar Deplyment y servicio
 ```
 kubectl apply -f ms1Deployment.yaml
-kubectl.exe apply -f ms1ServiceNodePort.yaml
+kubectl apply -f ms1ServiceNodePort.yaml
+
+oc apply -f ms1Deployment.yaml
+oc apply -f ms1ServiceNodePort.yaml
 ```
