@@ -20,3 +20,11 @@ spec:
         ports:
         - name: http
           containerPort: 4000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 4000
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 4000
