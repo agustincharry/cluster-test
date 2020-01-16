@@ -1,15 +1,14 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ms2-lb
-  namespace: default
   labels:
     app: deployment_label
 spec:
-  revisionHistoryLimit: 2
-  strategy:
-    type: RollingUpdate
   replicas: 1
+  selector:
+    matchLabels:
+      app: myLB
   template:
     metadata:
       labels:

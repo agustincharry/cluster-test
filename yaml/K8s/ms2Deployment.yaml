@@ -1,14 +1,10 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ms2
-  namespace: default
   labels:
     app: ms2
 spec:
-  revisionHistoryLimit: 2
-  strategy:
-    type: RollingUpdate
   replicas: 1
   template:
     metadata:
